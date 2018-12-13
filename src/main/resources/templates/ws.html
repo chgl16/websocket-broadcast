@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot+WebSocket+广播</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/ws.css}"/>
+</head>
+<body >
+<div id="root">
+    <div>
+        <button id="connect" onclick="connect()">加入连接</button>
+        <!-- 默认不能点击 -->
+        <button id="disconnect" disabled="disabled" onclick="disconnect()">断开连接</button>
+    </div>
+    <hr>
+    <div id="conversation-div">
+        <label>请输入要广播的信息：</label>
+        <input type="text" id="message"/>
+        <button id="sendMessage" onclick="sendMessage()">发送</button>
+        <hr>
+        <p id="response"></p>
+    </div>
+</div>
+<!-- 导入库 -->
+<script th:src="@{lib/sockjs.min.js}"></script>
+<script th:src="@{lib/stomp.min.js}"></script>
+<script th:src="@{lib/jquery.js}"></script>
+<script th:src="@{js/ws.js}"></script>
+</body>
+</html>

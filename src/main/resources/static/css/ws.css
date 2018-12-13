@@ -1,0 +1,9 @@
+#root {
+    /* background-color: chartreuse; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#conversation-div {
+    visibility: hidden;
+}
